@@ -1,0 +1,236 @@
+html {
+  /* 1 */
+  font: normal 11px / 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  background: #ffffff;
+  color: #444444;
+}
+
+/* ========================================================================
+   Component: Table
+ ========================================================================== */
+/*
+ * 1. Remove most spacing between table cells.
+ * 2. Block element behavior
+ * 3. Style
+ */
+.uk-table {
+  /* 1 */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* 2 */
+  width: 100%;
+  /* 3 */
+  margin-bottom: 10px;
+}
+.uk-table-border{
+  margin-top: 20px;
+}
+.uk-table-border td{
+  border-bottom: solid 1px #000;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .uk-table {
+  margin-top: 15px;
+}
+.uk-table th,
+.uk-table td {
+  padding: 8px 8px;
+  /*padding: 4px 8px;*/
+}
+/*
+ * Set alignment
+ */
+.uk-table th {
+  text-align: left;
+}
+.uk-table td {
+  vertical-align: top;
+}
+.uk-table thead th {
+  vertical-align: bottom;
+}
+/*
+ * Caption and footer
+ */
+.uk-table caption,
+.uk-table tfoot {
+  font-size: 12px;
+  font-style: italic;
+}
+.uk-table caption {
+  text-align: left;
+  color: #999999;
+}
+/* Sub-modifier: `uk-table-middle`
+ ========================================================================== */
+.uk-table-middle,
+.uk-table-middle td {
+  vertical-align: middle !important;
+}
+/* Modifier: `uk-table-striped`
+ ========================================================================== */
+.uk-table-striped tbody tr:nth-of-type(odd) {
+  background: #f5f5f5;
+}
+/* Modifier: `uk-table-condensed`
+ ========================================================================== */
+.uk-table-condensed td {
+  padding: 4px 8px;
+}
+/* Modifier: `uk-table-hover`
+ ========================================================================== */
+.uk-table-hover tbody tr:hover {
+  background: #eeeeee;
+}
+
+/* ========================================================================
+   Component: Panel
+ ========================================================================== */
+/*
+ * 1. Needed for `a` elements
+ * 2. Create position context for badges
+ */
+.uk-panel {
+  /* 1 */
+  display: block;
+  /* 2 */
+  position: relative;
+}
+/*
+ * Micro clearfix to make panels more robust
+ */
+.uk-panel:before,
+.uk-panel:after {
+  content: " ";
+  display: table;
+}
+.uk-panel:after {
+  clear: both;
+}
+/*
+ * Remove margin from the last-child if not `uk-widget-title`
+ */
+.uk-panel > :not(.uk-panel-title):last-child {
+  margin-bottom: 0;
+}
+/* Sub-object: `uk-panel-title`
+ ========================================================================== */
+.uk-panel-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: normal;
+  text-transform: none;
+  color: #444444;
+}
+/* Sub-object: `uk-panel-badge`
+ ========================================================================== */
+.uk-panel-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+/* Modifier: `uk-panel-box`
+ ========================================================================== */
+.uk-panel-box {
+  padding: 15px;
+  background: #f5f5f5;
+  color: #444444;
+}
+.uk-panel-box .uk-panel-title {
+  color: #444444;
+}
+.uk-panel-box .uk-panel-badge {
+  top: 10px;
+  right: 10px;
+}
+.uk-panel-box .uk-panel-teaser {
+  margin: -15px -15px 15px -15px;
+}
+/*
+ * Nav in panel
+ */
+.uk-panel-box > .uk-nav-side {
+  margin: 0 -15px;
+}
+/*
+ * Sub-modifier: `uk-panel-box-primary`
+ */
+.uk-panel-box-primary {
+  background-color: #ebf7fd;
+  color: #2d7091;
+}
+.uk-panel-box-primary .uk-panel-title {
+  color: #2d7091;
+}
+/*
+ * Sub-modifier: `uk-panel-box-secondary`
+ */
+.uk-panel-box-secondary {
+  background-color: #eeeeee;
+  color: #444444;
+}
+.uk-panel-box-secondary .uk-panel-title {
+  color: #444444;
+}
+/* Modifier: `uk-panel-header`
+ ========================================================================== */
+.uk-panel-header .uk-panel-title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  color: #444444;
+}
+/* Modifier: `uk-panel-space`
+ ========================================================================== */
+.uk-panel-space {
+  padding: 30px;
+}
+.uk-panel-space .uk-panel-badge {
+  top: 30px;
+  right: 30px;
+}
+/* Modifier: `uk-panel-divider`
+ ========================================================================== */
+.uk-panel + .uk-panel-divider {
+  margin-top: 50px !important;
+}
+.uk-panel + .uk-panel-divider:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #dddddd;
+}
+/* Large screen and bigger */
+@media (min-width: 1220px) {
+  .uk-panel + .uk-panel-divider {
+    margin-top: 70px !important;
+  }
+  .uk-panel + .uk-panel-divider:before {
+    top: -35px;
+  }
+}
+
+[class*='uk-align-'] {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.uk-align-right {
+  margin-left: 15px;
+  float: right;
+}
+
+.uk-margin-large-top {
+  margin-top: 50px !important;
+}
